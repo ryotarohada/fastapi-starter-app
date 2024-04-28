@@ -1,6 +1,13 @@
-# python_boilerplate
+# fastapi-starter-app
 
-A repository to get python project off to a speedy start.
+Templates for quickly building commonly configured web applications.
+
+## Docker Compose
+
+```sh
+docker-compose up -d --build # Container Build & Launch
+docker-compose down # Container termination/deletion
+```
 
 ## Virtual environment
 

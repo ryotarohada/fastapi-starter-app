@@ -1,0 +1,10 @@
+version: "3.0"
+
+services:
+  fastapi_starter_app:
+    container_name: "fastapi_starter_app"
+    volumes:
+      - ./:/app
+    build: .
+    ports:
+      - 8080:8080
