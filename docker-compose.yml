@@ -1,10 +1,22 @@
 version: "3.0"
 
 services:
-  fastapi_starter_app:
-    container_name: "fastapi_starter_app"
+  fastapi:
+    container_name: "fastapi"
     volumes:
       - ./:/app
     build: .
     ports:
       - 8080:8080
+  postgresql:
+    container_name: "postgresql"
+    image: postgres:15
+    volumes:
+      - ./app/db/postgresql/data:/var/lib/postgresql/data
+      - ./app/db/postgres:/docker-entrypoint-initdb.d
+    ports:
+      - ${POSTGRES_PORT}:5432
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
