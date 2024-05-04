@@ -1,3 +1,3 @@
-isort src --settings-file isort.toml
-python -m black src
-flake8 src
+isort app --settings-file isort.toml
+python -m black app
+flake8 app

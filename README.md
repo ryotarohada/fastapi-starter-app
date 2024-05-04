@@ -45,19 +45,19 @@ The way to run flake8 and black is to type the command or save the file (vscode 
 ### Command of flake8.
 
 ```sh
-flake8 src
+flake8 app
 ```
 
 ### Command of black.
 
 ```sh
-python -m black src
+python -m black app
 ```
 
 ### Command of isort.
 
 ```sh
-isort src --settings-file isort.toml
+isort app --settings-file isort.toml
 ```
 
 ### Command of execute all.
